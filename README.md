@@ -77,16 +77,21 @@ agent1.sources.source1.interceptors = i1
 agent1.sources.source1.interceptors.i1.type = host
 agent1.sources.source1.interceptors.i1.hostHeader = hostname
 ```
+
 配置sink组件为hdfs
+
 ```
 agent1.sinks.sink1.type = hdfs
 agent1.sinks.sink1.hdfs.path=hdfs://localhost:8020/weblog/flume-collection/%Y-%m-%d/%H-%M_%{hostname}
 ```
+
 #指定文件名前缀
+
 `agent1.sinks.sink1.hdfs.filePrefix = access_log`
+
 指定每批下沉数据的记录条数
-``
-`agent1.sinks.sink1.hdfs.batchSize= 100
+```
+agent1.sinks.sink1.hdfs.batchSize= 100
 agent1.sinks.sink1.hdfs.fileType = DataStream
 agent1.sinks.sink1.hdfs.writeFormat =Text
 ```
