@@ -90,16 +90,23 @@ agent1.sinks.sink1.hdfs.path=hdfs://localhost:8020/weblog/flume-collection/%Y-%m
 `agent1.sinks.sink1.hdfs.filePrefix = access_log`
 
 指定每批下沉数据的记录条数
+
 ```
 agent1.sinks.sink1.hdfs.batchSize= 100
 agent1.sinks.sink1.hdfs.fileType = DataStream
 agent1.sinks.sink1.hdfs.writeFormat =Text
 ```
+
 指定下沉文件按1MB大小滚动
+
 `agent1.sinks.sink1.hdfs.rollSize = 1048576`
+
 指定下沉文件按1000000条数滚动
+
 `agent1.sinks.sink1.hdfs.rollCount = 1000000`
+
 指定下沉文件按30分钟滚动
+
 ```
 agent1.sinks.sink1.hdfs.rollInterval = 30
 #agent1.sinks.sink1.hdfs.round = true
@@ -107,7 +114,9 @@ agent1.sinks.sink1.hdfs.rollInterval = 30
 #agent1.sinks.sink1.hdfs.roundUnit = minute
 agent1.sinks.sink1.hdfs.useLocalTimeStamp = true
 ```
+
 使用memory类型channel
+
 ```
 agent1.channels.channel1.type = memory
 agent1.channels.channel1.capacity = 500000
