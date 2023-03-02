@@ -1,0 +1,14 @@
+`drop table if  exists ods_weblog_origin0605;`
+create table ods_weblog_origin0610(
+valid string,
+remote_addr string,
+remote_user string,
+time_local string,
+request string,
+status string,
+body_bytes_sent string,
+http_referer string,
+http_user_agent string)
+partitioned by (datestr string)
+row format delimited
+fields terminated by '\001';
